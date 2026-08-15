@@ -232,6 +232,7 @@ if (reviewForm) {
     const artistName = `Artist - ${uniqueStamp}`;
     const albumTitle = `Album - ${uniqueStamp}`;
     const trackTitle = `Track - ${uniqueStamp}`;
+    const credits = `Track - ${uniqueStamp}`;
 
     try {
       // 2. Resolve Artist ID

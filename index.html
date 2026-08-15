@@ -49,54 +49,13 @@
         <h1>New Entry</h1>
       </header>
       
-      <form id="new-review-form" class="liner-form">
-        <div class="input-group">
-          <label for="input-spotify-url">Spotify Share Link</label>
-          <input type="url" id="input-spotify-url" placeholder="Paste link here..." required>
-        </div>
-
-        <div class="input-group split">
-          <div>
-            <label for="input-artist">Artist</label>
-            <input type="text" id="input-artist" required>
+        <form id="new-review-form" class="liner-form">
+          <div class="input-group">
+            <label for="input-spotify-url">Spotify Share Link</label>
+            <input type="url" id="input-spotify-url" placeholder="Paste link here..." required>
           </div>
-          <div>
-            <label for="input-track">Track</label>
-            <input type="text" id="input-track" required>
-          </div>
-        </div>
-
-        <div class="input-group">
-          <label for="input-album">Album</label>
-          <input type="text" id="input-album">
-        </div>
-
-        <div class="input-group">
-          <label for="input-credits">Credits</label>
-          <textarea id="input-credits" rows="2"></textarea>
-        </div>
-
-        <div class="input-group">
-          <label for="input-lyric">Lyric Focus</label>
-          <textarea id="input-lyric" rows="3" placeholder="Highlight something special..."></textarea>
-        </div>
-
-        <div class="input-group">
-          <label for="input-trivia">Curiosities</label>
-          <textarea id="input-trivia" rows="2"></textarea>
-        </div>
-
-        <div class="input-group">
-          <label for="input-tier">Shelf</label>
-          <select id="input-tier">
-            <option value="Essential">Essential</option>
-            <option value="Deep Cuts">Deep Cuts</option>
-            <option value="Still Considering">Still Considering</option>
-          </select>
-        </div>
-
-        <button type="submit" id="submit-review-btn" class="primary-btn">Update Collection</button>
-      </form>
+          <button type="submit" id="submit-review-btn" class="primary-btn">Create Entry</button>
+        </form>
     </section>
 
     <!-- VIEW: LINER NOTES DASHBOARD (Hidden initially) -->
@@ -139,7 +98,7 @@
 
       <!-- Compact Spotify Embed (Fixed to bottom) -->
       <div class="player-container">
-        <iframe id="spotify-player" src="" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe id="spotify-player" src="" width="100%" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
 
     </section>

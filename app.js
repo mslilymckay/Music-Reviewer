@@ -229,13 +229,13 @@ if (reviewForm) {
     submitBtn.disabled = true;
 
     // 1. Gather Input Data from the DOM
-    const artistName = document.getElementById('input-artist').value.trim();
-    const albumTitle = document.getElementById('input-album').value.trim();
-    const trackTitle = document.getElementById('input-track').value.trim();
     const trackUrl = document.getElementById('input-spotify-url').value.trim();
-    const lyricFocus = document.getElementById('input-lyric').value.trim();
-    const vibeTags = document.getElementById('input-vibe').value.trim();
-    const tier = document.getElementById('input-tier').value;
+    
+    // Generate unique placeholders so relational DB doesn't cluster them
+    const uniqueStamp = Date.now().toString().slice(-4);
+    const artistName = `Artist - ${uniqueStamp}`;
+    const albumTitle = `Album - ${uniqueStamp}`;
+    const trackTitle = `Track - ${uniqueStamp}`;
 
     try {
       // 2. Resolve Artist ID
@@ -311,10 +311,10 @@ if (reviewForm) {
         .from('reviews')
         .insert([{
           track_id: trackId,
+          credits: credits || null,
           lyric_focus: lyricFocus || null,
-          vibe_tags: vibeTags || null,
+          trivia: trivia || null,
           tier: tier || null
-          // created_at is handled automatically by Postgres defaults
         }]);
       
       if (reviewErr) throw reviewErr;

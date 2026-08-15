@@ -34,6 +34,51 @@ body {
   flex-direction: column;
 }
 
+#auth-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--ink-dark);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--paper-bg);
+  padding: 30px;
+  border: 1px solid var(--plastic-border);
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+.auth-toggle-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.auth-toggle-btn {
+  flex: 1;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid var(--ink-dark);
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.auth-toggle-btn.active {
+  background: var(--ink-dark);
+  color: var(--paper-bg);
+}
+
 .page-view {
   display: none;
   flex: 1;

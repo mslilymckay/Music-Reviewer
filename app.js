@@ -118,7 +118,6 @@ async function loadReviews() {
     .select(`
       id,
       lyric_focus,
-      vibe_tags,
       tier,
       created_at,
       tracks (
@@ -202,9 +201,6 @@ function renderDashboard(reviews) {
         </blockquote>
       ` : ''}
       
-      ${review.vibe_tags ? `
-        <p style="margin: 0; font-size: 0.85rem; color: #888; font-family: monospace;">#${escapeHtml(review.vibe_tags)}</p>
-      ` : ''}
     `;
 
     dashboard.appendChild(card);
